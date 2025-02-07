@@ -1,4 +1,4 @@
-MSSubClass: Identifies the type of dwelling involved in the sale.	
+MSSubClass: Identifies the type of dwelling involved in the sale.	   --> ONE-HOT
 
         20	1-STORY 1946 & NEWER ALL STYLES
         30	1-STORY 1945 & OLDER
@@ -17,7 +17,7 @@ MSSubClass: Identifies the type of dwelling involved in the sale.
        180	PUD - MULTILEVEL - INCL SPLIT LEV/FOYER
        190	2 FAMILY CONVERSION - ALL STYLES AND AGES
 
-MSZoning: Identifies the general zoning classification of the sale.
+MSZoning: Identifies the general zoning classification of the sale.        --> ONE-HOT
 		
        A	Agriculture
        C	Commercial
@@ -32,39 +32,39 @@ LotFrontage: Linear feet of street connected to property
 
 LotArea: Lot size in square feet
 
-Street: Type of road access to property
+Street: Type of road access to property                                     --> ONE-HOT
 
        Grvl	Gravel	
        Pave	Paved
-       	
-Alley: Type of alley access to property
+           	
+Alley: Type of alley access to property                                      --> ONE-HOT
 
        Grvl	Gravel
        Pave	Paved
        NA 	No alley access
 		
-LotShape: General shape of property
+LotShape: General shape of property                                           --> LABEL   (there is ordinal relationship)
 
        Reg	Regular	
        IR1	Slightly irregular
        IR2	Moderately Irregular
        IR3	Irregular
        
-LandContour: Flatness of the property
+LandContour: Flatness of the property                                         --> ONE-HOT (if ordinal, it's not clear that, for example, Banked is closer to Hillside than to Depression; so ordinal can't be right)
 
        Lvl	Near Flat/Level	
        Bnk	Banked - Quick and significant rise from street grade to building
        HLS	Hillside - Significant slope from side to side
        Low	Depression
 		
-Utilities: Type of utilities available
+Utilities: Type of utilities available                                        --> LABEL probably -- because you go from having a lot of utilities to have fewer and fewer 
 		
        AllPub	All public Utilities (E,G,W,& S)	
        NoSewr	Electricity, Gas, and Water (Septic Tank)
        NoSeWa	Electricity and Gas Only
        ELO	Electricity only	
 	
-LotConfig: Lot configuration
+LotConfig: Lot configuration                                                  --> ONE-HOT
 
        Inside	Inside lot
        Corner	Corner lot
@@ -72,13 +72,13 @@ LotConfig: Lot configuration
        FR2	Frontage on 2 sides of property
        FR3	Frontage on 3 sides of property
 	
-LandSlope: Slope of property
+LandSlope: Slope of property                                                   --> LABEL
 		
        Gtl	Gentle slope
        Mod	Moderate Slope	
        Sev	Severe Slope
 	
-Neighborhood: Physical locations within Ames city limits
+Neighborhood: Physical locations within Ames city limits                         --> done previously, one-hot
 
        Blmngtn	Bloomington Heights
        Blueste	Bluestem
@@ -106,7 +106,7 @@ Neighborhood: Physical locations within Ames city limits
        Timber	Timberland
        Veenker	Veenker
 			
-Condition1: Proximity to various conditions
+Condition1: Proximity to various conditions                                      --> ONE-HOT
 	
        Artery	Adjacent to arterial street
        Feedr	Adjacent to feeder street	
@@ -118,7 +118,7 @@ Condition1: Proximity to various conditions
        RRNe	Within 200' of East-West Railroad
        RRAe	Adjacent to East-West Railroad
 	
-Condition2: Proximity to various conditions (if more than one is present)
+Condition2: Proximity to various conditions (if more than one is present)            --> ONE-HOT
 		
        Artery	Adjacent to arterial street
        Feedr	Adjacent to feeder street	
@@ -130,7 +130,7 @@ Condition2: Proximity to various conditions (if more than one is present)
        RRNe	Within 200' of East-West Railroad
        RRAe	Adjacent to East-West Railroad
 	
-BldgType: Type of dwelling
+BldgType: Type of dwelling                                                               --> ONE-HOT
 		
        1Fam	Single-family Detached	
        2FmCon	Two-family Conversion; originally built as one-family dwelling
@@ -138,7 +138,7 @@ BldgType: Type of dwelling
        TwnhsE	Townhouse End Unit
        TwnhsI	Townhouse Inside Unit
 	
-HouseStyle: Style of dwelling
+HouseStyle: Style of dwelling                                                            --> ONE-HOT -- again ordinal relationship would not be clear enough
 	
        1Story	One story
        1.5Fin	One and one-half story: 2nd level finished
@@ -149,7 +149,7 @@ HouseStyle: Style of dwelling
        SFoyer	Split Foyer
        SLvl	Split Level
 	
-OverallQual: Rates the overall material and finish of the house
+OverallQual: Rates the overall material and finish of the house                             --> LABEL
 
        10	Very Excellent
        9	Excellent
@@ -162,7 +162,7 @@ OverallQual: Rates the overall material and finish of the house
        2	Poor
        1	Very Poor
 	
-OverallCond: Rates the overall condition of the house
+OverallCond: Rates the overall condition of the house                                         --> LABEL
 
        10	Very Excellent
        9	Excellent
@@ -179,8 +179,8 @@ YearBuilt: Original construction date
 
 YearRemodAdd: Remodel date (same as construction date if no remodeling or additions)
 
-RoofStyle: Type of roof
-
+RoofStyle: Type of roof                                                                         --> ONE-HOT
+                                
        Flat	Flat
        Gable	Gable
        Gambrel	Gabrel (Barn)
@@ -188,7 +188,7 @@ RoofStyle: Type of roof
        Mansard	Mansard
        Shed	Shed
 		
-RoofMatl: Roof material
+RoofMatl: Roof material                                                                     --> ONE-HOT
 
        ClyTile	Clay or Tile
        CompShg	Standard (Composite) Shingle
@@ -199,7 +199,7 @@ RoofMatl: Roof material
        WdShake	Wood Shakes
        WdShngl	Wood Shingles
 		
-Exterior1st: Exterior covering on house
+Exterior1st: Exterior covering on house                                                        --> ONE-HOT
 
        AsbShng	Asbestos Shingles
        AsphShn	Asphalt Shingles
@@ -219,7 +219,7 @@ Exterior1st: Exterior covering on house
        Wd Sdng	Wood Siding
        WdShing	Wood Shingles
 	
-Exterior2nd: Exterior covering on house (if more than one material)
+Exterior2nd: Exterior covering on house (if more than one material)                              --> ONE-HOT
 
        AsbShng	Asbestos Shingles
        AsphShn	Asphalt Shingles
@@ -239,7 +239,7 @@ Exterior2nd: Exterior covering on house (if more than one material)
        Wd Sdng	Wood Siding
        WdShing	Wood Shingles
 	
-MasVnrType: Masonry veneer type
+MasVnrType: Masonry veneer type                                                                    --> ONE-HOT
 
        BrkCmn	Brick Common
        BrkFace	Brick Face
@@ -249,7 +249,7 @@ MasVnrType: Masonry veneer type
 	
 MasVnrArea: Masonry veneer area in square feet
 
-ExterQual: Evaluates the quality of the material on the exterior 
+ExterQual: Evaluates the quality of the material on the exterior                                    --> LABEL
 		
        Ex	Excellent
        Gd	Good
@@ -257,7 +257,7 @@ ExterQual: Evaluates the quality of the material on the exterior
        Fa	Fair
        Po	Poor
 		
-ExterCond: Evaluates the present condition of the material on the exterior
+ExterCond: Evaluates the present condition of the material on the exterior                           --> LABEL
 		
        Ex	Excellent
        Gd	Good
@@ -265,7 +265,7 @@ ExterCond: Evaluates the present condition of the material on the exterior
        Fa	Fair
        Po	Poor
 		
-Foundation: Type of foundation
+Foundation: Type of foundation                                                                       --> ONE-HOT
 		
        BrkTil	Brick & Tile
        CBlock	Cinder Block
