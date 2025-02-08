@@ -239,7 +239,7 @@ Exterior2nd: Exterior covering on house (if more than one material)             
        Wd Sdng	Wood Siding
        WdShing	Wood Shingles
 	
-MasVnrType: Masonry veneer type                                                                    --> ONE-HOT
+MasVnrType: Masonry veneer type                                                                    --> careful: new indicator var and interaction terms needed
 
        BrkCmn	Brick Common
        BrkFace	Brick Face
@@ -247,7 +247,7 @@ MasVnrType: Masonry veneer type                                                 
        None	None
        Stone	Stone
 	
-MasVnrArea: Masonry veneer area in square feet
+MasVnrArea: Masonry veneer area in square feet                                                     --> see above
 
 ExterQual: Evaluates the quality of the material on the exterior                                    --> LABEL
 		
