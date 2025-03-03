@@ -28,8 +28,8 @@ LotFrontage: Linear feet of street connected to property                    --> 
 
 LotArea: Lot size in square feet                                             --> DONE       int, no encoding nesc
 
-Street: Type of road access to property                                     --> TO BE COMPLETED      I'd one-hot encoded it but this is incorrect -- most rows are NaN. To be treated as dependent feature (indic var, interaction
-                                                                                term)
+Street: Type of road access to property                                     --> DONE      encoded, one-hot
+        
        Grvl	Gravel	
        Pave	Paved
            	
@@ -39,7 +39,7 @@ Alley: Type of alley access to property                                      -->
        Pave	Paved
        NA 	No alley access
 		
-LotShape: General shape of property                                           --> LABEL   (there is ordinal relationship)
+LotShape: General shape of property                                           --> DONE     label-encoded         BUT ensure consistency with other label-encoded columns!
 
        Reg	Regular	
        IR1	Slightly irregular
