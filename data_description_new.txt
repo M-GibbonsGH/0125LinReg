@@ -39,28 +39,28 @@ Alley: Type of alley access to property                                      -->
        Pave	Paved
        NA 	No alley access
 		
-LotShape: General shape of property                                           --> DONE     label-encoded         BUT ensure consistency with other label-encoded columns!
+LotShape: General shape of property                                           --> DONE     one-hot. Because irregular not necessarily bad
 
        Reg	Regular	
        IR1	Slightly irregular
        IR2	Moderately Irregular
        IR3	Irregular
        
-LandContour: Flatness of the property                                         --> ONE-HOT (if ordinal, it's not clear that, for example, Banked is closer to Hillside than to Depression; so ordinal can't be right)
+LandContour: Flatness of the property                                         --> DONE     One-hot encoded      (if ordinal, it's not clear that, for example, Banked is closer to Hillside than to Depression; so ordinal can't be right)
 
        Lvl	Near Flat/Level	
        Bnk	Banked - Quick and significant rise from street grade to building
        HLS	Hillside - Significant slope from side to side
        Low	Depression
 		
-Utilities: Type of utilities available                                        --> LABEL probably -- because you go from having a lot of utilities to have fewer and fewer 
+Utilities: Type of utilities available                                        --> DONE     label encoded     But be careful with order consistency elsewhere
 		
        AllPub	All public Utilities (E,G,W,& S)	
        NoSewr	Electricity, Gas, and Water (Septic Tank)
        NoSeWa	Electricity and Gas Only
        ELO	Electricity only	
 	
-LotConfig: Lot configuration                                                  --> ONE-HOT
+LotConfig: Lot configuration                                                  --> DONE       one-hot encoded
 
        Inside	Inside lot
        Corner	Corner lot
