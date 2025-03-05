@@ -68,13 +68,13 @@ LotConfig: Lot configuration                                                  --
        FR2	Frontage on 2 sides of property
        FR3	Frontage on 3 sides of property
 	
-LandSlope: Slope of property                                                   --> LABEL
+LandSlope: Slope of property                                                   --> DONE     one-hot      b/c weak r b/w this and target
 		
        Gtl	Gentle slope
        Mod	Moderate Slope	
        Sev	Severe Slope
 	
-Neighborhood: Physical locations within Ames city limits                         --> done previously, one-hot
+Neighborhood: Physical locations within Ames city limits                         --> DONE           one-hot
 
        Blmngtn	Bloomington Heights
        Blueste	Bluestem
@@ -88,7 +88,7 @@ Neighborhood: Physical locations within Ames city limits                        
        IDOTRR	Iowa DOT and Rail Road
        MeadowV	Meadow Village
        Mitchel	Mitchell
-       Names	North Ames
+       NAmes	North Ames
        NoRidge	Northridge
        NPkVill	Northpark Villa
        NridgHt	Northridge Heights
@@ -126,15 +126,15 @@ Condition2: Proximity to various conditions (if more than one is present)       
        RRNe	Within 200' of East-West Railroad
        RRAe	Adjacent to East-West Railroad
 	
-BldgType: Type of dwelling                                                               --> ONE-HOT
+BldgType: Type of dwelling                                                               --> not done yet
 		
        1Fam	Single-family Detached	
        2FmCon	Two-family Conversion; originally built as one-family dwelling
        Duplx	Duplex
        TwnhsE	Townhouse End Unit
-       TwnhsI	Townhouse Inside Unit
+       Twnhs	Townhouse Inside Unit
 	
-HouseStyle: Style of dwelling                                                            --> ONE-HOT -- again ordinal relationship would not be clear enough
+HouseStyle: Style of dwelling                                                            --> DONE         one-hot --> correlation with target is indeed weak  
 	
        1Story	One story
        1.5Fin	One and one-half story: 2nd level finished
@@ -145,7 +145,7 @@ HouseStyle: Style of dwelling                                                   
        SFoyer	Split Foyer
        SLvl	Split Level
 	
-OverallQual: Rates the overall material and finish of the house                             --> LABEL
+OverallQual: Rates the overall material and finish of the house                             --> label
 
        10	Very Excellent
        9	Excellent
