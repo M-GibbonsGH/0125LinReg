@@ -145,9 +145,9 @@ HouseStyle: Style of dwelling                                                   
        SFoyer	Split Foyer
        SLvl	Split Level
 	
-OverallQual: Rates the overall material and finish of the house                             --> label
+OverallQual: Rates the overall material and finish of the house                             --> DONE         label --> strong correlation with target                [changed the word for number 10]
 
-       10	Very Excellent
+       10	Outstanding
        9	Excellent
        8	Very Good
        7	Good
@@ -158,9 +158,9 @@ OverallQual: Rates the overall material and finish of the house                 
        2	Poor
        1	Very Poor
 	
-OverallCond: Rates the overall condition of the house                                         --> LABEL
-
-       10	Very Excellent
+OverallCond: Rates the overall condition of the house                                         --> DONE           one-hot: weak correlation with target               [changed the word for number 10]
+ 
+       10   Outstanding
        9	Excellent
        8	Very Good
        7	Good
